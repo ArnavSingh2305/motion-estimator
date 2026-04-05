@@ -10,7 +10,8 @@ Motion Estimator is a Python project scaffold for future **video motion estimati
 
 This repository is set up to support a clean progression from scaffolding to implementation:
 
-- **`motion.py`**: Core module where motion-estimation logic will live.
+- **`motion.py`**: Core module for video source handling and frame-display loop (motion logic pending).
+- **`run_video.py`**: CLI runner that opens webcam/video and displays raw frames.
 - **`app.py`**: Streamlit UI placeholder for future interactive workflows.
 - **`utils.py`**: Shared helper functions and utility constants.
 - **`requirements.txt`**: Runtime dependencies for computer vision and UI development.
@@ -47,7 +48,18 @@ This repository is set up to support a clean progression from scaffolding to imp
    pip install -r requirements.txt
    ```
 
-4. **Run the UI placeholder**
+4. **Run the raw video runner**
+   ```bash
+   # Default webcam
+   python run_video.py --webcam 0
+
+   # Video file
+   python run_video.py --video ./path/to/video.mp4
+   ```
+
+   Press `q` in the video window to quit.
+
+5. **Run the UI placeholder**
    ```bash
    streamlit run app.py
    ```
